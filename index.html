@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Earth | Explore the Solar System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Beyond Earth</h1>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#planets">Planets</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+
+    <section id="home">
+      <h2>Explore the Solar System</h2>
+
+      <p>
+        Discover the planets that make up our solar system and learn
+        interesting facts about the worlds beyond Earth.
+      </p>
+
+      <a href="#planets">Explore Planets</a>
+    </section>
+
+    <!-- Planet Gallery -->
+    <section id="planets">
+
+      <h2>Choose a Planet</h2>
+
+      <div class="planet-grid">
+
+        <button class="planet-card">Mercury</button>
+
+        <button class="planet-card">Venus</button>
+
+        <button class="planet-card">Earth</button>
+
+        <button class="planet-card">Mars</button>
+
+        <button class="planet-card">Jupiter</button>
+
+        <button class="planet-card">Saturn</button>
+
+        <button class="planet-card">Uranus</button>
+
+        <button class="planet-card">Neptune</button>
+
+      </div>
+
+    </section>
+
+    <!-- Selected Planet Information -->
+    <section id="planet-info">
+
+      <h2>Planet Information</h2>
+
+      <h3 id="planet-name">Select a Planet</h3>
+
+      <p id="planet-description">
+        Choose a planet above to learn more about it.
+      </p>
+
+      <button id="show-more">Show More</button>
+
+      <p id="extra-fact"></p>
+
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz">
+
+      <h2>Space Quiz</h2>
+
+      <p>Which planet is known as the Red Planet?</p>
+
+      <button class="answer">Earth</button>
+      <button class="answer">Mars</button>
+      <button class="answer">Venus</button>
+
+      <p id="quiz-result"></p>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Beyond Earth</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
