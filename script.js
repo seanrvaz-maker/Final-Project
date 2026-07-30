@@ -50,7 +50,7 @@ let selectedPlanet = null;
 
 planetButtons.forEach(function(button) {
   button.addEventListener("click", function() {
-    selectedPlanet = button.textContent;
+    selectedPlanet = button.querySelector("span").textContent;
 
     planetName.textContent = selectedPlanet;
     planetDescription.textContent = planetData[selectedPlanet].description;
