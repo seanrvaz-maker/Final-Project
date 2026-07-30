@@ -139,6 +139,15 @@ section h2 {
 .planet-card:hover {
   transform: translateY(-5px);
   background-color: #1e293b;
+  .planet-card.selected {
+  border: 3px solid #7dd3fc;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.6);
+    .planet-card:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 4px;
 }
 
 /* Planet Information */
