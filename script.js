@@ -50,6 +50,11 @@ let selectedPlanet = null;
 
 planetButtons.forEach(function(button) {
   button.addEventListener("click", function() {
+    planetButtons.forEach(function(planet) {
+  planet.classList.remove("selected");
+});
+
+button.classList.add("selected");
     selectedPlanet = button.querySelector("span").textContent;
 
     planetName.textContent = selectedPlanet;
