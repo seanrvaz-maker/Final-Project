@@ -74,3 +74,17 @@ showMoreButton.addEventListener("click", function() {
     showMoreButton.textContent = "Show More";
   }
 });
+const answerButtons = document.querySelectorAll(".answer");
+const quizResult = document.getElementById("quiz-result");
+
+answerButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    const selectedAnswer = button.textContent;
+
+    if (selectedAnswer === "Mars") {
+      quizResult.textContent = "Correct! Mars is known as the Red Planet.";
+    } else {
+      quizResult.textContent = "Incorrect. Try again!";
+    }
+  });
+});
