@@ -1,1 +1,236 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #050816;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #0b1026;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #7dd3fc;
+}
+
+/* Hero */
+
+#home {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(
+    rgba(5, 8, 22, 0.55),
+    rgba(5, 8, 22, 0.9)
+  );
+}
+
+#home h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#home p {
+  max-width: 700px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#home a {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+#home a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Main Sections */
+
+section {
+  padding: 70px 8%;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Planet Gallery */
+
+#planets {
+  background-color: #080d1f;
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.planet-card {
+  min-height: 150px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  background-color: #111827;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.planet-card:hover {
+  transform: translateY(-5px);
+  background-color: #1e293b;
+}
+
+/* Planet Information */
+
+#planet-info {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#planet-name {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#planet-description {
+  margin-bottom: 20px;
+}
+
+#show-more {
+  padding: 10px 20px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#show-more:hover {
+  background-color: #6d28d9;
+}
+
+#extra-fact {
+  margin-top: 20px;
+}
+
+/* Quiz */
+
+#quiz {
+  text-align: center;
+  background-color: #080d1f;
+}
+
+#quiz p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.answer {
+  padding: 10px 22px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.answer:hover {
+  background-color: #1d4ed8;
+}
+
+#quiz-result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #0b1026;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #home h2 {
+    font-size: 36px;
+  }
+
+  .planet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .planet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #home h2 {
+    font-size: 30px;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+}
