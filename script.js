@@ -50,12 +50,7 @@ let selectedPlanet = null;
 
 planetButtons.forEach(function(button) {
   button.addEventListener("click", function() {
-    planetButtons.forEach(function(planet) {
-  planet.classList.remove("selected");
-});
-
-button.classList.add("selected");
-    selectedPlanet = button.querySelector("span").textContent;
+    selectedPlanet = button.textContent;
 
     planetName.textContent = selectedPlanet;
     planetDescription.textContent = planetData[selectedPlanet].description;
@@ -81,51 +76,15 @@ showMoreButton.addEventListener("click", function() {
 });
 const answerButtons = document.querySelectorAll(".answer");
 const quizResult = document.getElementById("quiz-result");
-const quizScore = document.getElementById("quiz-score");
-const restartQuiz = document.getElementById("restart-quiz");
-
-let score = 0;
-let answered = false;
 
 answerButtons.forEach(function(button) {
   button.addEventListener("click", function() {
+    const selectedAnswer = button.textContent;
 
-    if (answered === true) {
-      return;
-    }
-
-    answered = true;
-
-    if (button.textContent === "Mars") {
+    if (selectedAnswer === "Mars") {
       quizResult.textContent = "Correct! Mars is known as the Red Planet.";
-      quizResult.className = "correct";
-
-      score = 1;
-      quizScore.textContent = "Score: " + score;
     } else {
-      quizResult.textContent = "Incorrect. Mars is the correct answer.";
-      quizResult.className = "incorrect";
-    }
-
-    answerButtons.forEach(function(answer) {
-      answer.disabled = true;
-    });
-  });
-});
-
-restartQuiz.addEventListener("click", function() {
-  score = 0;
-  answered = false;
-
-  quizResult.textContent = "";
-  quizResult.className = "";
-
-  quizScore.textContent = "Score: 0";
-
-  answerButtons.forEach(function(answer) {
-    answer.disabled = false;
-  });
-});
+      quizResult.textContent = "Incorrect. Try again!";
     }
   });
 });
