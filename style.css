@@ -223,7 +223,52 @@ a:focus-visible {
 .answer:hover {
   background-color: #1d4ed8;
 }
+.quiz-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #111827;
+  border: 1px solid #334155;
+  border-radius: 16px;
+}
 
+.quiz-answers {
+  margin: 20px 0;
+}
+
+#quiz-score {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#restart-quiz {
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+#restart-quiz:hover {
+  background-color: #6d28d9;
+}
+
+#quiz-result.correct {
+  color: #86efac;
+  font-weight: bold;
+}
+
+#quiz-result.incorrect {
+  color: #fca5a5;
+  font-weight: bold;
+}
+
+.answer:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 #quiz-result {
   margin-top: 20px;
   font-weight: bold;
